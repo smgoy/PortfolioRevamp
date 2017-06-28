@@ -5,7 +5,9 @@ class Contact extends Component {
   render() {
     return (
       <div className='contact-container'>
-        yo
+        <div className='bottom-boarder'>
+          <h1 className='box-header text-shadow'>Contact.</h1>
+        </div>
       </div>
     );
   }
