@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
+import Box from '../util/box';
+
 class Contact extends Component {
 
   render() {
     return (
-      <div className='contact-container'>
-        <div className='bottom-boarder'>
-          <h1 className='box-header text-shadow'>Contact.</h1>
-        </div>
-      </div>
+      <Box name='Contact.' boxContainerType='contact-container'>
+      </Box>
     );
   }
 }

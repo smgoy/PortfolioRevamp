@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
+import Box from '../util/box';
+
 class About extends Component {
 
   render() {
     return (
-      <div className='about-container'>
-        <div className='bottom-boarder'>
-          <h1 className='box-header text-shadow'>About.</h1>
-        </div>
-      </div>
+      <Box name='About.' boxContainerType='about-container'>
+      </Box>
     );
   }
 }
