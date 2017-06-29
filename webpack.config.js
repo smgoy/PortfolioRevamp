@@ -78,6 +78,10 @@ module.exports = {
       {
         test: /\.sass$/,
         use: styleLoaders
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
     ]
   },

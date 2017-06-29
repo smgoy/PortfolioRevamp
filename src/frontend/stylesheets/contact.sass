@@ -2,3 +2,45 @@
   @include box-format(200px, 300px, $orange)
   margin-top: 25px
   align-self: center
+
+.contact-container:hover .plane
+  transform: translateX(150px)
+
+.contact-container:hover .fa-github
+  opacity: 1
+  transition-delay: 0s
+
+.contact-container:hover .fa-linkedin
+  opacity: 1
+  transition-delay: .5s
+
+.plane
+  position: absolute
+  bottom: 25%
+  transition: 1s
+  transition-timing-function: ease-out
+
+.fa-github
+  position: absolute
+  color: $blue
+  bottom: 30%
+  left: 15%
+  font-size: 40px
+  opacity: 0
+  transition: .5s
+  transition-delay: .3s
+  transition-timing-function: linear
+  cursor: pointer
+
+
+.fa-linkedin
+  position: absolute
+  color: $blue
+  bottom: 30%
+  left: 37%
+  font-size: 40px
+  opacity: 0
+  transition: .5s
+  transition-delay: 0s
+  transition-timing-function: linear
+  cursor: pointer

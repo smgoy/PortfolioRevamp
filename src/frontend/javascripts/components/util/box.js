@@ -17,7 +17,7 @@ class Box extends Component {
     h1.setAttribute('id', this.props.name);
     h1.appendChild(document.createTextNode(this.props.name));
     document.body.appendChild(h1);
-    const textEl = document.getElementById('skills');
+    const textEl = document.getElementById(this.props.name);
 
     const width = textEl.offsetWidth;
 
@@ -32,7 +32,7 @@ class Box extends Component {
     return (
       <div className={this.props.boxContainerType}>
         <h1 className='box-header text-shadow'>{this.props.name}</h1>
-        <div className='bottom-boarder box-shadow' style={{width: this.state.width * .5}}></div>
+        <div className='bottom-boarder box-shadow' style={{width: this.state.width * .65}}></div>
         {this.props.children}
       </div>
     );
