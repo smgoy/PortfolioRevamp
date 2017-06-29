@@ -6,7 +6,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <Box name='Contact.' boxContainerType='contact-container'>
+      <Box {...this.props} name='Contact.' boxContainerType='contact-container'>
         <a href='https://github.com/smgoy' target='_blank'>
           <i className="fa fa-github" aria-hidden="true"></i>
         </a>

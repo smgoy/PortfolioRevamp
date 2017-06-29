@@ -30,7 +30,7 @@ class Box extends Component {
 
   render() {
     return (
-      <div className={this.props.boxContainerType}>
+      <div className={`${this.props.boxContainerType} ${this.props.classes}`} onClick={this.props.onClick}>
         <h1 className='box-header text-shadow'>{this.props.name}</h1>
         <div className='bottom-boarder box-shadow' style={{width: this.state.width * .65}}></div>
         {this.props.children}
