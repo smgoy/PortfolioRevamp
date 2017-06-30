@@ -20,10 +20,6 @@ class Projects extends Component {
     }
   }
 
-  showContactBox() {
-    return <Contact classes='smaller-contact-container' />;
-  }
-
   render() {
     return (
       <Box {...this.props} name='Projects.' boxContainerType='projects-container'>
