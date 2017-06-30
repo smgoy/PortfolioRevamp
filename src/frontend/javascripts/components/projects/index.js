@@ -27,7 +27,6 @@ class Projects extends Component {
   render() {
     return (
       <Box {...this.props} name='Projects.' boxContainerType='projects-container'>
-        {this.state.clicked ? this.showContactBox() : ''}
       </Box>
     );
   }

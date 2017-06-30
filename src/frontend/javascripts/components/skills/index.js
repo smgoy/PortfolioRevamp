@@ -6,7 +6,7 @@ class Skills extends Component {
 
   render() {
     return (
-      <Box name='Skills.' boxContainerType='skills-container'>
+      <Box {...this.props} name='Skills.' boxContainerType='skills-container'>
       </Box>
     );
   }

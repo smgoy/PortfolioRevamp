@@ -1,9 +1,7 @@
 @mixin box-format($color)
   background-color: $color
   animation: raise-up 2.5s forwards linear
-  position: relative
-  opacity: 0
-
-@mixin grid-format($col-start, $col-end, $row-start, $row-end)
-  grid-column: $col-start / span $col-end
-  grid-row: $row-start / span $row-end
+  position: absolute
+  overflow: hidden
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+  transition: 2s

@@ -14,24 +14,10 @@ class Grid extends Component {
       classesProjects: '',
       classesSkills: '',
       classesContact: '',
-      clickedProjects: false
+      clickedProjects: false,
+      clickedSkills: false,
+      clickedAbout: false
     }
-  }
-
-  shrink() {
-    return 'shrink';
-  }
-
-  expand() {
-    return 'expand';
-  }
-
-  shrinkX() {
-    return 'shrinkX';
-  }
-
-  shrinkY() {
-    return 'strinkY';
   }
 
   onClickAbout() {
@@ -40,22 +26,24 @@ class Grid extends Component {
 
   onClickProjects() {
     this.setState({
-      classesContact: this.shrink(),
       clickedProjects: true,
-      classesProjects: this.expand()
-    })
+      classesContact: 'scale-shrink-contact',
+      classesAbout: 'scale-shrink-about',
+      classesSkills: 'scale-shrink-skills',
+      classesProjects: 'expand'
+    });
   }
 
   render() {
     return (
       <div className='grid'>
-        <About />
+        <About classes={this.state.classesAbout} />
         <Projects
           onClick={this.onClickProjects.bind(this)}
           clickedProjects={this.state.clickedProjects}
           classes={this.state.classesProjects} />
         <Contact classes={this.state.classesContact} />
-        <Skills />
+        <Skills classes={this.state.classesSkills} />
       </div>
     );
   }

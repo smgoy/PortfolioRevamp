@@ -1,13 +1,20 @@
-.shrink
-  transform: scale(0)
+.scale-shrink-contact
   transform-origin: center
+  animation: shrink-position-contact 1.5s forwards ease-in
+  z-index: 1
+
+.scale-shrink-about
+  transform-origin: center
+  animation: shrink-position-about 1.5s forwards ease-in
+  z-index: 1
+
+.scale-shrink-skills
+  transform-origin: center
+  animation: shrink-position-skills 1.5s forwards ease-in
+  z-index: 1
+
+.expand
+  width: 1000px
+  height: 575px
   transition: 2s
-
-// .expand
-//   width: 1000px
-//   margin-left: 0
-//   transform-origin: right top
-//   transition: 3s
-
-.shrinkX
-  width: 0
+  z-index: -1
