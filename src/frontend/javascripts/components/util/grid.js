@@ -41,7 +41,8 @@ class Grid extends Component {
   onClickProjects() {
     this.setState({
       classesContact: this.shrink(),
-      clickedProjects: true
+      clickedProjects: true,
+      classesProjects: this.expand()
     })
   }
 
@@ -49,7 +50,10 @@ class Grid extends Component {
     return (
       <div className='grid'>
         <About />
-        <Projects onClick={this.onClickProjects.bind(this)} clickedProjects={this.state.clickedProjects} />
+        <Projects
+          onClick={this.onClickProjects.bind(this)}
+          clickedProjects={this.state.clickedProjects}
+          classes={this.state.classesProjects} />
         <Contact classes={this.state.classesContact} />
         <Skills />
       </div>
