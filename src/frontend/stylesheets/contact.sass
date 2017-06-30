@@ -1,7 +1,6 @@
 .contact-container
-  @include box-format(200px, 300px, $orange)
-  margin-top: 25px
-  align-self: center
+  @include box-format($orange)
+  @include grid-format(1, 7, 14, 7)
 
 .contact-container:hover .plane
   transform: translateX(150px)
