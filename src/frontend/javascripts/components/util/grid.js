@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import Name from './name'
 import Contact from '../contact/index'
 import About from '../about/index';
 import Projects from '../projects/index'
