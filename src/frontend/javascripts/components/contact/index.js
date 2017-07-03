@@ -8,10 +8,10 @@ class Contact extends Component {
     return (
       <Box {...this.props} name='Contact.' boxContainerType='contact-container'>
         <a href='https://github.com/smgoy' target='_blank'>
-          <i className="fa fa-github" aria-hidden="true"></i>
+          <i className="fa fa-github text-shadow" aria-hidden="true"></i>
         </a>
         <a href='https://www.linkedin.com/in/sam-gyory-43572766' target='_blank'>
-          <i className="fa fa-linkedin" aria-hidden="true"></i>
+          <i className="fa fa-linkedin text-shadow" aria-hidden="true"></i>
         </a>
         <a href='mailto:sam.gyory@gmail.com' >
           <svg className='plane' x="0px" y="0px" viewBox="0 0 200 40">
