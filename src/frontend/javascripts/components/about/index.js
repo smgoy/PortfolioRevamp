@@ -8,7 +8,7 @@ class About extends Component {
     return (
       <Box {...this.props} name='About.' boxContainerType='about-container'>
         <p className='about-text text-inset'>
-          Hey, thanks for vising. I'm a full stack developer currently based in
+          Hey, thanks for visiting. I'm a full stack developer currently based in
           San Francisco.
         </p>
         <p className='about-text text-inset'>

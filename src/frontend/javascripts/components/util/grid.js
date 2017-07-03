@@ -40,31 +40,31 @@ class Grid extends Component {
   //   }
   // }
 
-  onClickAbout() {
-    // this.shrinkFromTopLeft();
-
-    this.setState({
-      clickedAbout: true,
-      homeState: false,
-      classesContact: 'scale-shrink-contact',
-      classesAbout: 'expand',
-      classesSkills: 'scale-shrink-skills',
-      classesProjects: 'scale-shrink-projects'
-    });
-  }
-
-  onClickSkills() {
-    // this.shrinkFromTopLeft();
-
-    this.setState({
-      clickedSkills: true,
-      homeState: false,
-      classesContact: 'scale-shrink-contact',
-      classesAbout: 'scale-shrink-about',
-      classesSkills: 'expand',
-      classesProjects: 'scale-shrink-projects'
-    });
-  }
+  // onClickAbout() {
+  //   // this.shrinkFromTopLeft();
+  //
+  //   this.setState({
+  //     clickedAbout: true,
+  //     homeState: false,
+  //     classesContact: 'scale-shrink-contact',
+  //     classesAbout: 'expand',
+  //     classesSkills: 'scale-shrink-skills',
+  //     classesProjects: 'scale-shrink-projects'
+  //   });
+  // }
+  //
+  // onClickSkills() {
+  //   // this.shrinkFromTopLeft();
+  //
+  //   this.setState({
+  //     clickedSkills: true,
+  //     homeState: false,
+  //     classesContact: 'scale-shrink-contact',
+  //     classesAbout: 'scale-shrink-about',
+  //     classesSkills: 'expand',
+  //     classesProjects: 'scale-shrink-projects'
+  //   });
+  // }
 
   onClickProjects() {
     // this.shrinkFromTopLeft();
@@ -73,25 +73,39 @@ class Grid extends Component {
       clickedProjects: true,
       homeState: false,
       classesContact: 'scale-shrink-contact',
-      classesAbout: 'scale-shrink-about',
-      classesSkills: 'scale-shrink-skills',
+      classesAbout: 'shrink',
+      classesSkills: 'scale-offset-skills',
       classesProjects: 'expand'
     });
+  }
+
+  onClickHome() {
+    this.setState({
+      classesAbout: '',
+      classesProjects: '',
+      classesSkills: 'expand-skills',
+      classesContact: 'expand-contact',
+      clickedProjects: false,
+      clickedSkills: false,
+      clickedAbout: false,
+      homeState: true
+    })
   }
 
   render() {
     return (
       <div className='grid'>
         <About
-          classes={this.state.classesAbout}
-          onClick={this.onClickAbout.bind(this)} />
+          classes={this.state.classesAbout} />
         <Projects
           onClick={this.onClickProjects.bind(this)}
-          classes={this.state.classesProjects} />
+          onClickHome={this.onClickHome.bind(this)}
+          classes={this.state.classesProjects}
+          clickedProjects={this.state.clickedProjects} />
         <Contact classes={this.state.classesContact} />
         <Skills
           classes={this.state.classesSkills}
-          onClick={this.onClickSkills.bind(this)} />
+          clickedProjects={this.state.clickedProjects} />
       </div>
     );
   }

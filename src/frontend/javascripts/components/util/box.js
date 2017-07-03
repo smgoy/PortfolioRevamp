@@ -4,7 +4,7 @@ class Box extends Component {
 
   render() {
     return (
-      <div className={`${this.props.boxContainerType} ${this.props.classes}`} onClick={this.props.onClick}>
+      <div className={`${this.props.boxContainerType} ${this.props.classes}`} >
         <h1 className='box-header text-inset'>{this.props.name}</h1>
         {this.props.children}
       </div>

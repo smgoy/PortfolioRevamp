@@ -16,13 +16,29 @@
   100%
     transform: scale(.75) translate(-103px, 55px)
 
+@keyframes expand-contact-home
+  0%
+    transform: scale(.75) translate(-103px, 55px)
+  100%
+    transform: scale(1) translate(0, 0)
+
 @keyframes shrink-position-skills
   0%
     transform: scale(1)
   100%
-    transform: scale(.75) translate(104px, -500px)
-    width: 160px
-    height: 60px
+    transform: scale(.75) translate(140px, -5px)
+    width: 600px
+    height: 160px
+
+@keyframes expand-skills-home
+  0%
+    transform: scale(.75) translate(140px, -5px)
+    width: 600px
+    height: 160px
+  100%
+    transform: scale(1) translate(0, 0)
+    width: 600px
+    height: 210px
 
 @keyframes shrink-position-about
   0%
@@ -40,15 +56,13 @@
     width: 160px
     height: 60px
 
-@keyframes fade-down
+@keyframes fade
   0%
     opacity: 0
-    top: -50px
   100%
     opacity: 1
-    top: 0
 
-@keyframes shake
+@keyframes hover
   0%
     text-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.23)
   50%
