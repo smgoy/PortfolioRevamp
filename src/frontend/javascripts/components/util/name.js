@@ -11,7 +11,7 @@ class Name extends Component {
 
   render() {
     return (
-      <p className='name text-shadow'>{this.state.name}</p>
+      <p className='name text-inset'>{this.state.name}</p>
     );
   }
 }
