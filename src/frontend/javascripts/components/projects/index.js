@@ -36,14 +36,14 @@ class Projects extends Component {
             c-0.4-4.2,1.5-8.7,6.1-9.7c-0.9-4.2,0.8-9.1,5.3-10.6c0.8-2.5,2.7-4.6,5.3-5.1"/>
         </svg>
         <svg id='graph'>
-	       <line className="graph-line" x1="35.5" y1="14.2" x2="14.2" y2="106.6"/>
-	       <circle className="roni" cx="14.2" cy="106.6" r="13.7"/>
-	       <circle className="roni" cx="35.5" cy="14.2" r="13.7"/>
-	       <circle className="roni" cx="84.9" cy="92.9" r="13.7"/>
-	       <line className="graph-line" x1="35.5" y1="14.2" x2="84.9" y2="92.9"/>
+          <line className="graph-line" x1="35.5" y1="14.2" x2="14.2" y2="106.6"/>
+	        <circle className="roni" cx="14.2" cy="106.6" r="13.7"/>
+	        <circle className="roni" cx="35.5" cy="14.2" r="13.7"/>
+	        <circle className="roni" cx="84.9" cy="92.9" r="13.7"/>
+	        <line className="graph-line" x1="35.5" y1="14.2" x2="84.9" y2="92.9"/>
         </svg>
 
-        <p className='expand-projects text-shadow'>View All >></p>
+        <p className='expand-projects text-inset'>View All >></p>
       </Box>
     );
   }
