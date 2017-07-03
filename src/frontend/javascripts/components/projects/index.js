@@ -43,7 +43,7 @@ class Projects extends Component {
 	       <line className="graph-line" x1="35.5" y1="14.2" x2="84.9" y2="92.9"/>
         </svg>
 
-        <p className='expand-projects'>View All >></p>
+        <p className='expand-projects text-shadow'>View All >></p>
       </Box>
     );
   }
