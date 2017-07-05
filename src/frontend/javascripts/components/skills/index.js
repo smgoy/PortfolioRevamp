@@ -8,7 +8,8 @@ class Skills extends Component {
     super(props);
 
     this.state = {
-      clicked: false
+      clicked: false,
+      hoverClass: ''
     };
   }
 
@@ -20,6 +21,16 @@ class Skills extends Component {
     } else {
       this.setState({
         clicked: false
+      });
+    }
+
+    if(nextProps.hoverClass) {
+      this.setState({
+        hoverClass: 'hover-skills'
+      });
+    } else {
+      this.setState({
+        hoverClass: ''
       });
     }
   }
