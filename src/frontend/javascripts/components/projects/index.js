@@ -58,19 +58,20 @@ class Projects extends Component {
     } else {
       return (
         <div className='project-preview'>
-          <MouseOver
-            project='pizza'
-            skills={['js', 'react', 'ruby', 'rails', 'sql']}
-            projectName='Pizza With Strangers'>
-            <Pizza />
-          </MouseOver>
-          <MouseOver
-            project='graph'
-            skills={['js', 'd3']}
-            projectName='Graph Builder'>
-            <Graph />
-          </MouseOver>
-
+          <div className='row' style={{height:240}}>
+            <MouseOver
+              project='pizza'
+              skills={['js', 'react', 'ruby', 'rails', 'sql']}
+              projectName='Pizza With Strangers'>
+              <Pizza />
+            </MouseOver>
+            <MouseOver
+              project='graph'
+              skills={['js', 'd3']}
+              projectName='Graph Builder'>
+              <Graph />
+            </MouseOver>
+          </div>
           <p className='expand-projects text-inset' onClick={this.props.onClick}>
             Explore More
           </p>
