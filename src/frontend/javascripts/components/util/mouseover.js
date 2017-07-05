@@ -11,11 +11,19 @@ class MouseOver extends Component {
 
   componentDidMount() {
     document.getElementById(this.props.project).addEventListener('mouseover', () => {
+      this.setState({
+        viewProjectName: true
+      });
+
       this.props.skills.forEach( skill => {
         document.getElementById(skill).classList.add('hover-skills');
       });
     });
     document.getElementById(this.props.project).addEventListener('mouseout', () => {
+      this.setState({
+        viewProjectName: false
+      });
+
       this.props.skills.forEach( skill => {
         console.log(skill);
         document.getElementById(skill).classList.remove('hover-skills');
@@ -27,7 +35,7 @@ class MouseOver extends Component {
     return(
       <div>
         {this.props.children}
-        <p style={{textAlign: 'center'}}>{this.props.projectName}</p>
+        {this.state.viewProjectName ? <p style={{textAlign: 'center'}}>{this.props.projectName}</p> : null}
       </div>
     );
   }
