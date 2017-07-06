@@ -5,6 +5,7 @@ import MouseOver from '../util/mouseover';
 import Pizza from './pizza';
 import Graph from './graph';
 import Taco from './taco';
+import FBBot from './fbBot';
 
 class Projects extends Component {
   constructor(props) {
@@ -35,24 +36,34 @@ class Projects extends Component {
              aria-hidden="true"
              onClick={this.props.onClickHome}>
           </i>
-          <MouseOver
-            project='pizza'
-            skills={['js', 'react', 'ruby', 'rails', 'sql']}
-            projectName='Pizza With Strangers'>
-            <Pizza />
-          </MouseOver>
-          <MouseOver
-            project='graph'
-            skills={['js', 'd3']}
-            projectName='Graph Builder'>
-            <Graph />
-          </MouseOver>
-          <MouseOver
-            project='taco'
-            skills={['js', 'node', 'express', 'react', 'nosql']}
-            projectName='Taco Truck API'>
-            <Taco />
-          </MouseOver>
+          <div className='row'>
+            <MouseOver
+              project='pizza'
+              skills={['js', 'react', 'ruby', 'rails', 'sql']}
+              projectName='Pizza With Strangers'>
+              <Pizza />
+            </MouseOver>
+            <MouseOver
+              project='graph'
+              skills={['js', 'd3']}
+              projectName='Graph Builder'>
+              <Graph />
+            </MouseOver>
+            <MouseOver
+              project='taco'
+              skills={['js', 'node', 'express', 'react', 'nosql']}
+              projectName='Taco Truck API'>
+              <Taco />
+            </MouseOver>
+          </div>
+          <div className='row'>
+            <MouseOver
+              project='fbbot'
+              skills={['js', 'node', 'express']}
+              projectName='Facebook Messenger Bot'>
+              <FBBot />
+            </MouseOver>
+          </div>
         </div>
       );
     } else {

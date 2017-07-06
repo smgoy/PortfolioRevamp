@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Graph = ({ hover }) => (
-  <svg width='100' height='121' className={hover ? 'shrink' : ''}>
+  <svg width='100' height='121' className={hover ? 'shrink' : 'grow'}>
     <line className="graph-line" x1="35.5" y1="14.2" x2="14.2" y2="106.6"/>
     <circle className="roni" cx="14.2" cy="106.6" r="13.7"/>
     <circle className="roni" cx="35.5" cy="14.2" r="13.7"/>

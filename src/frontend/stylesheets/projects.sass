@@ -30,10 +30,10 @@
   stroke-width: 7
   stroke-miterlimit: 10
 
-// #pizza
-  // position: absolute
-  // top: 35%
-  // left: 15%
+.pizza-image
+  transition: 1s
+  transform-origin: center
+  transform: scale(1)
 
 .expand-projects:hover #js
   @include skill-animation
@@ -75,6 +75,8 @@
   transform: translate(-50%, -50%)
   animation: fade .5s alternate
   min-width: 200px
+  opacity: 0
+  transition: 1s
 
 .indiv-project-header
   font-size: 20px
@@ -90,3 +92,26 @@
 .fa-globe
   font-size: 17px
   margin-right: 30px
+
+.fadein
+  opacity: 1
+
+.fb-st0
+  fill: none
+  stroke: $dark-red
+  stroke-width: 4
+  stroke-miterlimit: 10
+
+.fb-st1
+  fill: none
+  stroke: $dark-red
+  stroke-width: 3
+  stroke-miterlimit: 10
+
+.fb-st2
+  stroke: $dark-red
+  stroke-width: 2
+  stroke-miterlimit: 10
+
+.fb-st3
+  enable-background: new
