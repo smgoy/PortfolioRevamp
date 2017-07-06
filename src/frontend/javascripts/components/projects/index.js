@@ -6,6 +6,8 @@ import Pizza from './pizza';
 import Graph from './graph';
 import Taco from './taco';
 import FBBot from './fbBot';
+import ConditionOfEdu from './condition_of_edu';
+import ExpenseReport from './expense_report';
 
 class Projects extends Component {
   constructor(props) {
@@ -62,6 +64,12 @@ class Projects extends Component {
               skills={['js', 'node', 'express']}
               projectName='Facebook Messenger Bot'>
               <FBBot />
+            </MouseOver>
+            <MouseOver
+              project='report'
+              skills={['js', 'node', 'express', 'react', 'nosql']}
+              projectName='Expense Report'>
+              <ExpenseReport />
             </MouseOver>
           </div>
         </div>
