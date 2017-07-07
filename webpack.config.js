@@ -88,12 +88,8 @@ module.exports = {
   plugins: [
     ifProd(new ExtractTextPlugin('[name].css')),
     new HtmlWebpackPlugin({
-      filename: isDev ? './index.html' : '../index.html',
+      filename: './index.html',
       template: './index.html',
-      hash: true,
-      minify: {
-        collapseWhitespace: !isDev
-      }
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),

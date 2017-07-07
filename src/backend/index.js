@@ -16,10 +16,12 @@ if (isDev) {
   app.use(webpackHotMiddleware(compiler));
 }
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '../public')))
+
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile('./index.html', { root: __dirname });
 });
+
 
 app.listen(3000, err => {
   if(err) {
