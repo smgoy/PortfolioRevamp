@@ -73,10 +73,9 @@
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  animation: fade .5s alternate
+  // animation: fade .5s alternate
   min-width: 250px
-  opacity: 0
-  transition: 1s
+  z-index: -1
 
 .indiv-project-header
   font-size: 20px
@@ -140,3 +139,11 @@
   stroke-linecap: round
   stroke-linejoin: round
   stroke-miterlimit: 10
+
+  .project-img
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto

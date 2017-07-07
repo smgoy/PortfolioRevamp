@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FBBot = ({ hover }) => (
-  <svg width='105' height='152' className={hover ? 'shrink' : 'grow'}>
+  <svg className='project-img' width='105' height='152' className={hover ? 'shrink' : 'grow'}>
     <path className="fb-st0" d="M88.1,150H16.2C8.9,150,3,144.1,3,136.8v-72c0-7.2,5.9-13.2,13.2-13.2h72c7.2,0,13.2,5.9,13.2,13.2v72
     	C101.3,144.1,95.3,150,88.1,150z"/>
     <line className="fb-st1" x1="35.6" y1="51.8" x2="18.4" y2="11"/>

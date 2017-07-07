@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pizza = ({ hover }) => {
   return (
-    <svg width='145' height='130' className={hover ? 'shrink' : 'grow'}>
+    <svg className='project-img' width='145' height='130' className={hover ? 'shrink' : 'grow'}>
       <circle className="roni" cx="48.2" cy="85.9" r="8.7"/>
       <circle className="roni" cx="73.1" cy="36.6" r="8.9"/>
       <circle className="roni" cx="75.7" cy="69.2" r="11"/>
