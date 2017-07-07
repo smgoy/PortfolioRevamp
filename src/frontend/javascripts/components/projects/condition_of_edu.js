@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ConditionOfEdu = ({ hover }) => (
-  <svg width='170' height='130' className={hover ? 'shrink' : 'grow'}>
+  <svg className='project-img' width='170' height='130' className={hover ? 'shrink' : 'grow'}>
     <path className="edu-st0" d="M131,73.3l-9.4,5v16.7l0,0.3c0,0.2,0.6,6.1-4.3,11.6c-5.6,6.2-16.4,9.5-31.3,9.5c-15.1,0-26.4-3.4-32.6-9.9
     	c-5.3-5.5-5.3-11.5-5.3-11.6l0-0.2V80.2l-9.4-5v19.6c0,1.4,0,10.5,7.8,18.6c8.2,8.5,21.4,12.8,39.5,12.8c18.1,0,30.9-4.3,38.5-12.9
     	c7-7.9,7.1-16.7,6.4-18.7V73.3z"/>

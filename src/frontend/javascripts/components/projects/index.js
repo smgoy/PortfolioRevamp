@@ -8,6 +8,7 @@ import Taco from './taco';
 import FBBot from './fbBot';
 import ConditionOfEdu from './condition_of_edu';
 import ExpenseReport from './expense_report';
+import projects from './project_details'
 
 class Projects extends Component {
   constructor(props) {
@@ -40,35 +41,45 @@ class Projects extends Component {
           </i>
           <div className='row'>
             <MouseOver
-              project='pizza'
-              skills={['js', 'react', 'ruby', 'rails', 'sql']}
-              projectName='Pizza With Strangers'>
+              project={projects.pizza.project}
+              skills={projects.pizza.skills}
+              projectName={projects.pizza.projectName}
+              URL={projects.pizza.URL}
+              description={projects.pizza.description}>
               <Pizza />
             </MouseOver>
             <MouseOver
-              project='graph'
-              skills={['js', 'd3']}
-              projectName='Graph Builder'>
+              project={projects.graph.project}
+              skills={projects.graph.skills}
+              projectName={projects.graph.projectName}
+              URL={projects.graph.URL}
+              description={projects.graph.description}>
               <Graph />
             </MouseOver>
             <MouseOver
-              project='taco'
-              skills={['js', 'node', 'express', 'react', 'nosql']}
-              projectName='Taco Truck API'>
+              project={projects.taco.project}
+              skills={projects.taco.skills}
+              projectName={projects.taco.projectName}
+              URL={projects.taco.URL}
+              description={projects.taco.description}>
               <Taco />
             </MouseOver>
           </div>
           <div className='row'>
             <MouseOver
-              project='fbbot'
-              skills={['js', 'node', 'express']}
-              projectName='Facebook Messenger Bot'>
+              project={projects.fbbot.project}
+              skills={projects.fbbot.skills}
+              projectName={projects.fbbot.projectName}
+              URL={projects.fbbot.URL}
+              description={projects.fbbot.description}>
               <FBBot />
             </MouseOver>
             <MouseOver
-              project='report'
-              skills={['js', 'node', 'express', 'react', 'nosql']}
-              projectName='Expense Report'>
+              project={projects.report.project}
+              skills={projects.report.skills}
+              projectName={projects.report.projectName}
+              URL={projects.report.URL}
+              description={projects.report.description}>
               <ExpenseReport />
             </MouseOver>
           </div>
@@ -79,15 +90,19 @@ class Projects extends Component {
         <div className='project-preview'>
           <div className='row' style={{height:240}}>
             <MouseOver
-              project='pizza'
-              skills={['js', 'react', 'ruby', 'rails', 'sql']}
-              projectName='Pizza With Strangers'>
+              project={projects.pizza.project}
+              skills={projects.pizza.skills}
+              projectName={projects.pizza.projectName}
+              URL={projects.pizza.URL}
+              description={projects.pizza.description}>
               <Pizza />
             </MouseOver>
             <MouseOver
-              project='graph'
-              skills={['js', 'd3']}
-              projectName='Graph Builder'>
+              project={projects.graph.project}
+              skills={projects.graph.skills}
+              projectName={projects.graph.projectName}
+              URL={projects.graph.URL}
+              description={projects.graph.description}>
               <Graph />
             </MouseOver>
           </div>

@@ -35,11 +35,7 @@ class MouseOver extends Component {
       return (
         <div id={`poject-description__${this.props.project}`} className='indiv-project-container'>
           <p className='indiv-project-header text-inset'>{this.props.projectName}</p>
-          <p>description goes here. description goes here. description goes here.</p>
-          <div className='row' style={{marginTop:5}}>
-            <a href={this.props.gethubLink}><i className="fa fa-code text-inset" aria-hidden="true"></i></a>
-            <a href={this.props.liveURL}><i className="fa fa-globe text-inset" aria-hidden="true"></i></a>
-          </div>
+          <p>{this.props.description}</p>
         </div>
       );
     }
@@ -53,12 +49,14 @@ class MouseOver extends Component {
    );
 
     return(
-      <div className='mouseover-container' style={{width:145, height:152}}>
-        <div id={this.props.project}>
-          {childrenWithProps}
+      <a href={this.props.URL} target='_blank'>
+        <div className='mouseover-container' style={{width:145, height:152}}>
+          <div id={this.props.project}>
+            {childrenWithProps}
+          </div>
+          {this.renderProjectInfo()}
         </div>
-        {this.renderProjectInfo()}
-      </div>
+      </a>
     );
   }
 }
