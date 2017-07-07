@@ -4,11 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack');
 
-const isDev = process.env.NODE_ENV === 'development';
-const ifDev = then => (isDev ? then : null);
-const ifProd = then => (!isDev ? then : null);
-const nullsOut = i => i;
-
 const styleLoaderOptions = {
   style: {
     loader: "style-loader"
@@ -30,41 +25,29 @@ const styleLoaderOptions = {
     loader: 'sass-loader',
     options: {
       indentedSyntax: true,
-      includePaths: [path.resolve(__dirname, './src/frontend/stylesheets')]
+      includePaths: [path.resolve(__dirname, './frontend/stylesheets')]
     }
   }
 }
 
-let styleLoaders;
-if (isDev) {
-  styleLoaders = [
-    styleLoaderOptions.style,
+const styleLoaders = ExtractTextPlugin.extract({
+  fallback: 'style-loader',
+  use: [
     styleLoaderOptions.css,
     styleLoaderOptions.postcss,
     styleLoaderOptions.sass
-  ];
-} else {
-  styleLoaders = ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    use: [
-      styleLoaderOptions.css,
-      styleLoaderOptions.postcss,
-      styleLoaderOptions.sass
-    ]
-  });
-}
+  ]
+});
 
 module.exports = {
   target: 'web',
   entry: {
     app: [
-      ifDev('react-hot-loader/patch'),
-      ifDev('webpack-hot-middleware/client?quiet=true'),
-      path.join(__dirname, 'src/frontend/javascripts/index')
-    ].filter(nullsOut)
+      path.join(__dirname, './frontend/javascripts/index')
+    ]
   },
   output: {
-    path: path.join(__dirname, 'dist/public'),
+    path: path.join(__dirname, '/public'),
     filename: '[name].js',
     publicPath: '/'
   },
@@ -86,21 +69,13 @@ module.exports = {
     ]
   },
   plugins: [
-    ifProd(new ExtractTextPlugin('[name].css')),
-    new HtmlWebpackPlugin({
-      filename: isDev ? './index.html' : '../index.html',
-      template: './index.html',
-      hash: true,
-      minify: {
-        collapseWhitespace: !isDev
-      }
-    }),
+    new ExtractTextPlugin('[name].css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
-  ].filter(nullsOut),
+  ],
   resolve: {
     extensions: ['.js', '.sass'],
-    modules: [path.join(__dirname, './src/frontend/javascripts'), 'node_modules']
+    modules: [path.join(__dirname, './frontend/javascripts'), 'node_modules']
   }
 };

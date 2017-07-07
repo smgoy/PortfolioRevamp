@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "NODE_ENV=development nodemon src/backend --exec babel-node",
-    "start": "node dist/server",
-    "build": "npm run prebuild && webpack && babel src/backend -d dist/server",
-    "prebuild": "rimraf dist"
+    "start": "node backend",
+    "postinstall": "./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -20,7 +18,13 @@
     "url": "https://github.com/smgoy/node-react-starter-kit/issues"
   },
   "homepage": "https://github.com/smgoy/node-react-starter-kit#readme",
-  "devDependencies": {
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
     "autoprefixer": "^7.1.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
@@ -40,13 +44,5 @@
     "webpack": "^2.6.1",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0"
-  },
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "cors": "^2.8.3",
-    "express": "^4.15.3",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-router": "^4.1.1"
   }
 }
